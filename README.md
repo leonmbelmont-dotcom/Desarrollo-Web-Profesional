@@ -16,7 +16,7 @@ Archivos importantes
 - `css/style.css` - Estilos principales (variables de color al inicio).
 - `js/main.js` - Lógica de interactividad (nav móvil, modales, scroll).
 - `images/` - Imágenes usadas (hero, avatar, servicios).
-- 
+
 Contacto del autor
 ------------------
 Leonxsoldier — leonmbelmont@gmail.com
