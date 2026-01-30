@@ -31,6 +31,8 @@ El sitio está disponible en GitHub Pages:
 ## 📂 Estructura del proyecto
 -------------------
 - `index.html` - Página principal.
+- `about.html` - Página principal.
+- `projects.html` - Página principal.
 - `css/style.css` - Estilos principales (variables de color al inicio).
 - `js/main.js` - Lógica de interactividad (nav móvil, modales, scroll).
 - `images/` - Imágenes usadas (hero, avatar, servicios).
