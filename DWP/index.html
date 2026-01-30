@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Proyecto Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Perfil -->
+            <a href="#inicio" class="nav-logo" aria-label="Perfil de Leonxsoldier">
+                <img src="images/profile.jpg" alt="Leonxsoldier" class="logo-img">
+                <div class="nav-user-info">
+                    <div class="nav-user-name">Leonxsoldier</div>
+                    <div class="nav-user-email">leonmbelmont@gmail.com</div>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="about.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="projects.html" class="nav-link">Portafolio</a></li>
+                <li><a href="index.html#contacto" class="nav-link nav-link-btn">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="hero" id="inicio">
+        <img src="images/stardust.svg" alt="" class="stardust-overlay" aria-hidden="true">
+        <div class="container">
+            <div class="hero-badge">🚀 Desarrollo Web Moderno</div>
+            <h1 class="hero-title">Desarrollo Web Profesional</h1>
+            <p class="hero-subtitle">Soluciones web modernas, responsivas y de alto rendimiento</p>
+            <p class="hero-description">Especializado en HTML, CSS y JavaScript</p>
+            <button id="ctaBtn" class="hero-btn">Explorar Proyectos</button>
+        </div>
+    </header>
+
+    <!-- SECCIÓN CONTENIDO -->
+    <section class="services container" id="servicios">
+        <div class="card">
+            <img src="images/service1.png" alt="HTML5">
+            <h3>📄 HTML5 Semántico</h3>
+            <p>Estructuras limpias, accesibles y SEO-friendly. Utilizo las mejores prácticas de HTML5 para crear sitios web que sean fáciles de mantener y comprender.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/service2.png" alt="CSS3">
+            <h3>🎨 CSS3 Moderno</h3>
+            <p>Diseños responsivos y hermosos. Implemento CSS Grid, Flexbox y animaciones suaves para crear experiencias visuales excepcionales en cualquier dispositivo.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/service3.png" alt="JavaScript">
+            <h3>⚡ JavaScript Interactivo</h3>
+            <p>Funcionalidades dinámicas y fluidas. Desarrollo código limpio y eficiente que mejora la interactividad y la experiencia del usuario.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="about container" id="sobre">
+        <h2>Sobre Este Proyecto</h2>
+        <p>Este es un proyecto de demostración que muestra mis habilidades en desarrollo web frontend. Cada elemento está optimizado para rendimiento, accesibilidad y diseño responsivo.</p>
+        <div class="features">
+            <div class="feature">✅ Diseño Responsivo</div>
+            <div class="feature">✅ Optimizado SEO</div>
+            <div class="feature">✅ Rendimiento Rápido</div>
+            <div class="feature">✅ Código Limpio</div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section class="portfolio container" id="portafolio">
+        <h2>Mi Portafolio</h2>
+        <p>Proyectos destacados que demuestran mis habilidades</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">📱</div>
+                <h3>Sitio Responsivo</h3>
+                <p>Diseño móvil-first con CSS Grid y Flexbox</p>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">⚙️</div>
+                <h3>App Interactiva</h3>
+                <p>JavaScript vanilla con funcionalidades avanzadas</p>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🎨</div>
+                <h3>Diseño Moderno</h3>
+                <p>Interfaz visual atractiva y user-friendly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta" id="contacto">
+        <h2>¿Interesado en trabajar juntos?</h2>
+        <p>Cuéntame sobre tu proyecto y cómo puedo ayudarte</p>
+        <button id="contactBtn">Contáctame Ahora</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - Leonardo Marcos | Desarrollo Web</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

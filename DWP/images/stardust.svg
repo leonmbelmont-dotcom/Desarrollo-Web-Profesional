@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9" />
+      <stop offset="50%" stop-color="#00bfff33" />
+      <stop offset="100%" stop-color="#0000" />
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b" />
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="3" result="f"/>
+      <feMerge><feMergeNode in="f"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style><![CDATA[
+      .star { fill: #fff; opacity: 0.9 }
+      /* slower 'dust-like' twinkle for white stars */
+      .twinkle { animation: twinkle 6s infinite ease-in-out; transform-origin: center; }
+      /* teal stars: contrasting color and slower twinkle */
+      .teal { fill: #66f0d5; opacity: 0.95 }
+      .teal-twinkle { animation: twinkleTeal 9s infinite ease-in-out; transform-origin: center; }
+      /* drift slower to simulate floating stardust */
+      .drift { animation: drift 36s linear infinite; }
+      @keyframes twinkle { 0%,100%{opacity:0.1;transform:scale(0.6)}50%{opacity:1;transform:scale(1)} }
+      @keyframes twinkleTeal { 0%,100%{opacity:0.05;transform:scale(0.7)}50%{opacity:1;transform:scale(1)} }
+      @keyframes drift { from{transform:translateY(0) translateX(0)} to{transform:translateY(-60px) translateX(40px)} }
+
+      /* Shooting star animation */
+      .shooting { transform-box: fill-box; transform-origin: 50% 50%; animation: shoot 150s linear infinite; }
+      .shoot-core { fill: #fff7; filter: url(#glowFilter); }
+      .shoot-tail { stroke: #9ee6ff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; opacity: 0.95; animation: tailfade 150s linear infinite; }
+      @keyframes shoot {
+        /* start near top-left so it's visible on load, travel to bottom-right */
+        0%   { transform: translate(-50px, -20px) scale(0.8); opacity: 1 }
+        5%   { opacity: 1 }
+        50%  { transform: translate(600px, 300px) scale(0.95); opacity: 1 }
+        95%  { opacity: 1 }
+        100% { transform: translate(1600px, 900px) scale(1.05); opacity: 0 }
+      }
+
+      @keyframes tailfade {
+        0% { opacity: 1 }
+        95% { opacity: 1 }
+        100% { opacity: 0 }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- soft nebula glow -->
+  <g opacity="0.35">
+    <circle cx="950" cy="120" r="220" fill="url(#glow)"/>
+    <circle cx="200" cy="320" r="140" fill="url(#glow)"/>
+    <circle cx="600" cy="80" r="100" fill="url(#glow)"/>
+  </g>
+
+  <!-- twinkling stars layer -->
+  <g filter="url(#blur)">
+    <g class="drift">
+      <circle class="star twinkle" cx="120" cy="80" r="2.4" />
+      <circle class="star twinkle" cx="220" cy="40" r="1.8" style="animation-delay:0.2s" />
+      <circle class="star twinkle" cx="320" cy="160" r="1.6" style="animation-delay:0.6s" />
+      <circle class="star twinkle" cx="420" cy="120" r="2.0" style="animation-delay:1.1s" />
+      <circle class="star twinkle" cx="520" cy="60" r="1.4" style="animation-delay:0.4s" />
+      <circle class="star twinkle" cx="680" cy="140" r="2.6" style="animation-delay:0.9s" />
+      <circle class="star twinkle" cx="780" cy="30" r="1.6" style="animation-delay:1.5s" />
+      <circle class="star twinkle" cx="880" cy="180" r="1.9" style="animation-delay:0.8s" />
+      <circle class="star twinkle" cx="980" cy="70" r="2.2" style="animation-delay:0.3s" />
+      <circle class="star twinkle" cx="1080" cy="130" r="1.5" style="animation-delay:1.0s" />
+    </g>
+
+    <g class="drift" style="animation-duration:48s;">
+      <circle class="star twinkle" cx="150" cy="420" r="1.6" style="animation-delay:0.1s" />
+      <circle class="star twinkle" cx="260" cy="360" r="2.2" style="animation-delay:0.9s" />
+      <circle class="star twinkle" cx="360" cy="500" r="1.3" style="animation-delay:0.5s"/>
+      <circle class="star twinkle" cx="460" cy="440" r="1.9" style="animation-delay:0.2s"/>
+      <circle class="star twinkle" cx="560" cy="520" r="1.2" style="animation-delay:1.2s"/>
+      <circle class="star twinkle" cx="760" cy="420" r="2.0" style="animation-delay:0.4s"/>
+      <circle class="star twinkle" cx="860" cy="480" r="1.7" style="animation-delay:1.6s"/>
+    </g>
+  </g>
+
+  <!-- shooting star (travels across the scene) -->
+  <g class="shooting" aria-hidden="true">
+    <!-- trail: long path (approx. full page width) that will follow the group transform -->
+    <path class="shoot-tail" d="M0 0 C -300 -80 -600 -160 -1200 -320" stroke-opacity="0.7" fill="none" filter="url(#glowFilter)"/>
+    <!-- core -->
+    <circle class="shoot-core" cx="0" cy="0" r="3.5" />
+  </g>
+
+  <!-- removed static right-side streak per user request -->
+
+</svg>
