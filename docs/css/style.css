@@ -39,6 +39,7 @@ body {
 /* NAVBAR */
 .navbar {
     background: var(--nav-bg);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     padding: 15px 0;
     position: sticky;
@@ -125,7 +126,8 @@ body {
 
 .avatar-content {
     background: linear-gradient(90deg, var(--accent-2), var(--accent));
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -318,6 +320,7 @@ body {
 .hero-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     color: var(--text-primary);
     padding: 8px 20px;
@@ -422,6 +425,7 @@ body {
 
 .card {
     background: var(--panel-bg);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     padding: 20px;
     text-align: center;
@@ -457,6 +461,7 @@ body {
 /* SECCIÓN SOBRE MÍ */
 .about {
     background: var(--panel-bg);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     padding: 60px 20px;
     text-align: center;
@@ -568,6 +573,7 @@ footer {
 
 .modal-content {
     background: linear-gradient(90deg, var(--accent-2), var(--accent));
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
@@ -679,6 +685,7 @@ footer {
 
 .portfolio-item {
     background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     padding: 40px 30px;
     border-radius: 15px;
